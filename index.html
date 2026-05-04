@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="open.css">
+    <title>DSA Quiz</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="selection-box">
+            <h2>Select Difficulty</h2>
+            <button class="mode-btn" onclick="startQuiz('easy')">Easy</button>
+            <button class="mode-btn" onclick="startQuiz('moderate')">Moderate</button>
+            <button class="mode-btn" onclick="startQuiz('hard')">Hard</button>
+        </div>
+
+        <div id="quiz-ui" class="hide">
+            <h1>Quick Quiz</h1>
+            <div id="timer-box">Time: <span id="time">10</span>s</div>
+            
+            <div id="question-box">
+                <h2 id="question">Loading...</h2>
+                <div id="options"></div>
+                <button id="next-btn" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="result" class="hide"></div>
+    </div>
+
+    <script src="learn.js"></script>
+</body>
+</html>

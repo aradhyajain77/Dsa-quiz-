@@ -1,0 +1,113 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.quiz-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Difficulty & Option Buttons */
+.mode-btn, .option-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover, .option-btn:hover {
+    transform: translateY(-3px);
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Timer Box */
+#timer-box {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+#time {
+    color: #ffeb3b;
+}
+
+/* Result Colors */
+.correct {
+    background: #4caf50 !important;
+    color: white !important;
+}
+
+.wrong {
+    background: #f44336 !important;
+    color: white !important;
+}
+
+/* Next Button */
+#next-btn {
+    background: #ff9800;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+}
+
+#next-btn:hover {
+    background: #e68a00;
+}
+
+/* Utility Classes */
+.hide {
+    display: none !important;
+}
+
+/* Animation for Question Appearance */
+#question-box {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
